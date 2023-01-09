@@ -9,6 +9,14 @@
       "content": "<p>Next.js app on GitHub Pages</p>",
       "slug": "nextjs-app-on-github-pages",
       "keywords": ["nextjs", "github", "pages"]
+    },
+    {
+      "id": 2,
+      "title": "Artists vs. AI",
+      "date": "20230120",
+      "content": "<p>A bunch of artists I know are panicking that AI is going to take over their jobs. They could very well be right.<p><p>But I think they're missing the point. AI is not going to take over artists' jobs. It's going to take over the craftsman's jobs.</p>",
+      "slug": "artists-vs-ai",
+      "keywords": ["AI", "art", "craft"]
     }
   ]
 }
