@@ -1,0 +1,14 @@
+{
+  "title": "Kajgod blog",
+  "description": "A blog about technology and philosophy",
+  "posts": [
+    {
+      "id": 1,
+      "title": "Next.js app on GitHub Pages",
+      "date": "20230109",
+      "content": "<p>Next.js app on GitHub Pages</p>",
+      "slug": "nextjs-app-on-github-pages",
+      "keywords": ["nextjs", "github", "pages"]
+    }
+  ]
+}
