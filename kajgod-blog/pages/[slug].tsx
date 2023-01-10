@@ -1,5 +1,6 @@
 import Head from "next/head";
-import Link from "next/link";
+import Header from "../components/Header";
+import Date from "../components/Date";
 import blog from "../data/blog.json";
 
 // Generates a page for each blog post
@@ -36,13 +37,12 @@ export default function Blog({ slug }: { slug: string }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Header />
+
       <main>
-        <h2>
-          <Link href="/">{`<< `}</Link>
-          {post.title}
-        </h2>
-        <p className="small">{post.date}</p>
-        <div dangerouslySetInnerHTML={{ __html: post.content }} />
+        <Date dateString={post.date} />
+        <h2>{post.title}</h2>
+        <div className="article-container" dangerouslySetInnerHTML={{ __html: post.content }} />
       </main>
 
       <footer></footer>

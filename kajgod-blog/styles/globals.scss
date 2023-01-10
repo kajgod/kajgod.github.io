@@ -65,12 +65,16 @@ p {
   font-size: var(--medium-font-size);
   line-height: 1.5;
   color: var(--foreground-color);
+  margin: 0.75rem 0;
 }
 
 pre {
-  font-size: var(--small-font-size);
-  line-height: 1.5;
+  font-size: var(--medium-font-size);
   color: var(--foreground-color);
+  line-height: 1.5;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border: 1px dashed var(--highlight-color);
 }
 
 a {
@@ -88,30 +92,28 @@ h6 {
   transition: all 50ms ease;
   font-family: Montserrat, sans-serif;
   letter-spacing: 0.12rem;
-  text-transform: uppercase;
 }
 
 h1 {
   font-size: var(--xlarge-font-size);
   text-align: center;
   line-height: 5;
+  text-transform: uppercase;
   span {
     border-bottom: 0.1rem solid var(--highlight-color);
   }
 }
 
 h2 {
+  font-size: var(--xlarge-font-size);
+  text-transform: uppercase;
+}
+
+h3 {
   font-size: var(--large-font-size);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-pre {
+main {
   max-width: 64rem;
   margin: 0 auto;
 }
@@ -122,4 +124,15 @@ pre {
 
 .highlight {
   color: var(--highlight-color);
+}
+
+.title-article {
+  margin: 0 0 2.5rem 0;
+}
+
+.article-container {
+  margin: 2.5rem 0 1.5rem 0;
+  h3 {
+    margin: 2rem 0 1rem 0;
+  }
 }

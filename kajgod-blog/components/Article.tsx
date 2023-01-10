@@ -1,3 +1,5 @@
+import Date from "./Date";
+
 interface IArticle {
   title: string;
   date: string;
@@ -6,8 +8,8 @@ interface IArticle {
 
 const Article = ({ title, date, content }: IArticle) => {
   return (
-    <article>
-      <p className="small">{date}</p>
+    <article className="title-article">
+      <Date dateString={date} />
       <h2>{title}</h2>
       <div dangerouslySetInnerHTML={{ __html: content }} />
     </article>
