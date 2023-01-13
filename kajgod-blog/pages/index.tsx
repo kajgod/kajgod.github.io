@@ -22,9 +22,13 @@ export default function Home() {
 
       <Header />
 
-      <main>
+      <main className="index-main">
         {posts.map((post) => (
-          <Link href={`/${post.slug}`} key={post.slug}>
+          <Link
+            href={`/${post.slug}`}
+            className="index-main__item"
+            key={post.slug}
+          >
             <Article title={post.title} date={post.date} content={post.hype} />
           </Link>
         ))}
