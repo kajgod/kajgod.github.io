@@ -136,3 +136,14 @@ main {
     margin: 2rem 0 1rem 0;
   }
 }
+
+.index-main {
+  display: grid;
+  column-gap: 2rem;
+  grid-template-columns: auto auto;
+  &__item {
+    &:first-child {
+      grid-column: 1 / span 2;
+    }
+  }
+}

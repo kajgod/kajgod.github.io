@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Header from "../components/Header";
+import Meta from "../components/Meta";
 import Date from "../components/Date";
 import blog from "../data/blog.json";
 
@@ -33,8 +34,12 @@ export default function Blog({ slug }: { slug: string }) {
   return (
     <>
       <Head>
-        <title>{post.title}</title>
-        <link rel="icon" href="/favicon.ico" />
+        <Meta
+          title={post.title}
+          description={post.hype}
+          slug={post.slug}
+          timeString={post.timeString}
+        />
       </Head>
 
       <Header />
@@ -42,7 +47,10 @@ export default function Blog({ slug }: { slug: string }) {
       <main>
         <Date dateString={post.date} />
         <h2>{post.title}</h2>
-        <div className="article-container" dangerouslySetInnerHTML={{ __html: post.content }} />
+        <div
+          className="article-container"
+          dangerouslySetInnerHTML={{ __html: post.content }}
+        />
       </main>
 
       <footer></footer>
