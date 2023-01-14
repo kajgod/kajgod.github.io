@@ -1,20 +1,19 @@
 import Head from "next/head";
 import Link from "next/link";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import Meta from "../components/Meta";
 import Article from "../components/Article";
-import blog from "../data/blog.json";
+import { getHomepageData } from "../lib/data";
 
 export default function Home() {
-  let posts = [...blog.posts].filter((post) => post.published);
-  posts = posts.reverse().slice(0, 5);
-  const timeString = posts[0].timeString;
+  const { title, description, timeString, posts } = getHomepageData();
   return (
     <>
       <Head>
         <Meta
-          title={blog.title}
-          description={blog.description}
+          title={title}
+          description={description}
           slug=""
           timeString={timeString}
         />
@@ -34,7 +33,7 @@ export default function Home() {
         ))}
       </main>
 
-      <footer></footer>
+      <Footer />
     </>
   );
 }

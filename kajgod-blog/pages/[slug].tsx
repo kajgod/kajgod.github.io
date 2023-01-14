@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import Meta from "../components/Meta";
 import Date from "../components/Date";
 import blog from "../data/blog.json";
@@ -44,7 +45,7 @@ export default function Blog({ slug }: { slug: string }) {
 
       <Header />
 
-      <main>
+      <main className="main-single-article">
         <Date dateString={post.date} />
         <h2>{post.title}</h2>
         <div
@@ -53,7 +54,7 @@ export default function Blog({ slug }: { slug: string }) {
         />
       </main>
 
-      <footer></footer>
+      <Footer />
     </>
   );
 }

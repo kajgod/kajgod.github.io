@@ -1,6 +1,7 @@
 {
   "title": "Kajgod blog",
   "description": "A blog about technology and philosophy",
+  "homepagePageCount": 5,
   "posts": [
     {
       "id": 1,
