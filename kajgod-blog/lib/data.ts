@@ -1,13 +1,5 @@
-import blog from "../data/blog.json";
-
-export interface IPost {
-  title: string;
-  slug: string;
-  content: string;
-  hype: string;
-  date: string;
-  keywords: string[];
-}
+import { blog } from "../data/blog";
+import { IPost } from "../data/types";
 
 export interface IBlogPageData {
   title: string;

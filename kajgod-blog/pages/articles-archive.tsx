@@ -4,7 +4,8 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Meta from "../components/Meta";
 import Date from "../components/Date";
-import { getArchiveData, IPost } from "../lib/data";
+import { getArchiveData } from "../lib/data";
+import { IPost } from "../data/types";
 
 const Content = ({ posts }: { posts: IPost[] }) => (
   <main className="archive-main">

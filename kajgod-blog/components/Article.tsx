@@ -3,7 +3,7 @@ import Date from "./Date";
 interface IArticle {
   title: string;
   date: string;
-  content: string;
+  content: React.ReactNode;
 }
 
 const Article = ({ title, date, content }: IArticle) => {
@@ -11,7 +11,7 @@ const Article = ({ title, date, content }: IArticle) => {
     <article className="title-article">
       <Date dateString={date} />
       <h2>{title}</h2>
-      <div dangerouslySetInnerHTML={{ __html: content }} />
+      <div>{content}</div>
     </article>
   );
 };

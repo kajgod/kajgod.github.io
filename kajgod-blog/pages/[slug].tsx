@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Meta from "../components/Meta";
 import Date from "../components/Date";
-import blog from "../data/blog.json";
+import { blog } from "../data/blog";
 
 // Generates a page for each blog post
 // Called on build time 1st
@@ -37,7 +37,7 @@ export default function Blog({ slug }: { slug: string }) {
       <Head>
         <Meta
           title={post.title}
-          description={post.hype}
+          description={post.description}
           slug={post.slug}
           timeString={post.timeString}
         />
@@ -48,10 +48,7 @@ export default function Blog({ slug }: { slug: string }) {
       <main className="main-single-article">
         <Date dateString={post.date} />
         <h2>{post.title}</h2>
-        <div
-          className="article-container"
-          dangerouslySetInnerHTML={{ __html: post.content }}
-        />
+        <div className="article-container">{post.content}</div>
       </main>
 
       <Footer />
