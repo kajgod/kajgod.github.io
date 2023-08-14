@@ -131,6 +131,15 @@ main {
   margin: 0 auto;
 }
 
+ul {
+  padding: 0;
+  margin: 0;
+  li {
+    color: var(--foreground-color);
+    margin: 0.25rem 1rem;
+  }
+}
+
 .small {
   font-size: var(--small-font-size);
 }

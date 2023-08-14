@@ -13,7 +13,7 @@ export const Post = () => (
       with related code.
     </p>
     <p>
-      Being an amateur artist in spare time, I decided I should have two
+      Being an amateur artist in my spare time, I decided I should have two
       completely separate blogs for documenting two completely separate domains,
       but again - the second blog should also encapsulate "art" with thoughts
       about art.
@@ -21,12 +21,12 @@ export const Post = () => (
     <p>
       On a more-or-less unrelated note: I wanted to make both very easy to add
       to. I'm planning to make an offline CMS for it which would create the
-      content and commit it to appropriate repo. To lessen the code-writing I
-      have to do (albeit complicate the process a bit) I decided to parse JSONs
-      created in the CMS with Next.js. Now, Next is something I know quite well.
-      The thought of trying something more egzotic and hip like Qwik, Fresh or
-      Astro certainly crossed my mind, but I wanted this thing live as soon as
-      possible, so...
+      content and commit it to the appropriate repo. To lessen the code-writing
+      I have to do (albeit complicate the process a bit) I decided to parse
+      JSONs created in the CMS with Next.js. Now, Next is something I know quite
+      well. The thought of trying something more exotic and hip like Qwik, Fresh
+      or Astro certainly crossed my mind, but I wanted this thing live as soon
+      as possible, so...
     </p>
     <p>All of this led to the first WTF moment on GitHub Pages.</p>
     <h3>WTF, GitHub?</h3>
@@ -35,7 +35,7 @@ export const Post = () => (
       [yourName].github.io and place static HTML in the root. To do so I could
       have changed a Next config, but I wanted to keep Next separated from the
       generated page in a separate folder, so I rather just added a copy action
-      to build scrip like so:
+      to build script like so:
     </p>
     <pre>next build && next export && cp -r out/* ../</pre>
     <p>Well, it didn't work. At all.</p>
@@ -54,8 +54,8 @@ export const Post = () => (
       starts with an underscore as a Jekyll folder and ignores it when serving
       content. WTF? I never really used Jekyll (we have some CI/CD workflow at
       my day job, but I never had to do much more than restart the computer
-      running it) and it seems so random and odd to give it (and it's
-      conventions) the first-class-citizen treament. Just let it take over all
+      running it) and it seems so random and odd to give it (and its
+      conventions) the first-class-citizen treatment. Just let it take over all
       other software that uses the _[folder - name] file structure?
     </p>
     <h3>All's well...</h3>
@@ -66,9 +66,9 @@ export const Post = () => (
     <p>
       ...create an empty .nojekyll file in the root, and the blog page appears.
       The only problem with this approach as far as I can tell is that the old
-      files remain in the _next folder because they always get prefied. A delete
-      before copying in the build script fixes it in most cases (close enough
-      for all intents and purposes, anyway):
+      files remain in the _next folder because they always get preferred. A
+      delete before copying in the build script fixes it in most cases (close
+      enough for all intents and purposes, anyway):
     </p>
     <pre>
       rm -r ../_next && next build && next export && cp -r out/* ../ && touch
@@ -77,7 +77,7 @@ export const Post = () => (
     <p>
       Next is quite ubiquitous these days, so I guess I'm not the only one to
       run into this problem, and this short rant may actually prove useful to
-      someone. You're welcome, if that happens to be you.
+      someone. You're welcome if that happens to be you.
     </p>
   </>
 );
