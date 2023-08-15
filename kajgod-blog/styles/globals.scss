@@ -31,7 +31,8 @@
   --medium-font-size: 1rem;
   --large-font-size: 1.2rem;
   --xlarge-font-size: 1.4rem;
-  --min-content-height: calc(100vh - 15rem);
+  --min-content-height: calc(100vh - 20rem);
+  --min-about-height: calc(100vh - 13rem);
   --transition-speed: 75ms;
   --transition-border: border var(--transition-speed) ease,
     padding var(--transition-speed) ease;
@@ -111,10 +112,18 @@ h6 {
 }
 
 h1 {
-  font-size: var(--xlarge-font-size);
   text-align: center;
-  line-height: 5;
-  text-transform: uppercase;
+  margin: 3rem 0 1.5rem 0;
+  svg {
+    width: 28rem;
+    height: 5rem;
+  }
+  .kajgod-headtext {
+    fill: var(--highlight-color);
+  }
+  .tech-blog-headtext {
+    fill: var(--foreground-color);
+  }
 }
 
 h2 {
@@ -200,6 +209,17 @@ ul {
   p {
     margin: 0;
   }
+}
+
+.about-main {
+  min-height: var(--min-about-height);
+  svg {
+    display: block;
+    margin: 3rem auto 1.5rem auto;
+  }
+}
+.about-svg-path {
+  fill: var(--highlight-color);
 }
 
 .main-single-article {
