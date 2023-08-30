@@ -269,3 +269,11 @@ footer {
     }
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .index-main {
+    &__item {
+      grid-column: 1 / span 2;
+    }
+  }
+}
