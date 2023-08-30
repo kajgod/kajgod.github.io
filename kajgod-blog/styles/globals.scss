@@ -3,6 +3,7 @@
   --background: url(/bg.gif) var(--background-color);
   --foreground-color: #666;
   --highlight-color: #db2333;
+  --darkest-color: #000;
 }
 
 @mixin dark-theme {
@@ -10,6 +11,7 @@
   --background: var(--background-color);
   --foreground-color: #fff;
   --highlight-color: #9f111b;
+  --darkest-color: #000;
 }
 
 @mixin border-off {
@@ -90,6 +92,15 @@ pre {
   padding: 1.5rem;
   margin: 1.5rem 0;
   border: 1px dashed var(--highlight-color);
+  overflow: auto;
+}
+
+aside {
+  display: block;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  line-height: 1.5;
+  border: 1px dashed var(--foreground-color);
 }
 
 a {
@@ -117,6 +128,7 @@ h1 {
   svg {
     width: 28rem;
     height: 5rem;
+    max-width: 100%;
   }
   .kajgod-headtext {
     fill: var(--highlight-color);
@@ -138,6 +150,7 @@ h3 {
 main {
   max-width: 64rem;
   margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
 ul {

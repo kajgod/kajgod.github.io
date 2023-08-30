@@ -54,7 +54,7 @@ export const blog: IBlog = {
       content: <Post003 />,
       slug: "val-town-is-pretty-cool",
       keywords: ["val town", "deno", "javascript"],
-      published: false,
+      published: true,
     },
   ],
 };
