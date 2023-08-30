@@ -7,7 +7,6 @@ interface IMeta {
 
 const Meta = ({ title, description, slug, timeString }: IMeta) => (
   <>
-    <title>{title}</title>
     <link rel="icon" href="/favicon.ico" />
     <link
       rel="preconnect"

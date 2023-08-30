@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "rm -r ../_next && next build && next export && cp -r out/* ../ && touch ../.nojekyll",
-    "newbuild": "next build && next export && cp -r out/* ../ && touch ../.nojekyll",
+    "build": "rm -r ../_next && next build  && cp -r out/* ../ && touch ../.nojekyll",
+    "newbuild": "next build && cp -r out/* ../ && touch ../.nojekyll",
     "start": "next start",
     "lint": "next lint"
   },

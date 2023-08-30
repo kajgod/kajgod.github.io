@@ -11,6 +11,7 @@ export default function Home() {
   return (
     <>
       <Head>
+        <title>{title}</title>
         <Meta
           title={title}
           description={description}

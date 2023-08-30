@@ -3238,11 +3238,13 @@ Q 324.05 66.95 324.1 66.95 324.15 67 324.2 67 Z"
 );
 
 const About = () => {
+  const title = "About Kajgod tech blog";
   return (
     <>
       <Head>
+        <title>{title}</title>
         <Meta
-          title="About Kajgod tech blog"
+          title={title}
           description="Kajgod is a developer from Croatia who likes to do fun things, but does what he is told instead."
           slug="about"
           timeString="2023-08-14 20:00:00 +0000 UTC"

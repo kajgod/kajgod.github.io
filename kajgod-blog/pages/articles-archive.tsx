@@ -32,6 +32,7 @@ const Archive = () => {
   return (
     <>
       <Head>
+        <title>{title}</title>
         <Meta
           title={title}
           description={description}

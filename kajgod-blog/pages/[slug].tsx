@@ -35,6 +35,7 @@ export default function Blog({ slug }: { slug: string }) {
   return (
     <>
       <Head>
+        <title>{post.title}</title>
         <Meta
           title={post.title}
           description={post.description}
